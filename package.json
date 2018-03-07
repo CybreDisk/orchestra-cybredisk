@@ -1,0 +1,12 @@
+{
+  "name": "@cybredisk/orchestra-cybredisk",
+  "private": true,
+  "version": "0.2.0",
+  "description": "CybreDisk build system with CybreDisk paraphernalia",
+  "author": "Andrew Zyabin",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/CybreDisk/orchestra-cybredisk.git"
+  },
+  "license": "MIT"
+}
