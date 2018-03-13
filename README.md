@@ -4,7 +4,7 @@
 
 Basically, it's [Orchestra](https://github.com/CybreDisk/orchestra) dropped in a separate repository with submodules to be included in the CybreDisk.
 
-The version of Orchestra currently in use here is [0.2.0](https://github.com/CybreDisk/orchestra/releases/tag/v0.2.0).
+The version of Orchestra currently in use here is [0.2.1](https://github.com/CybreDisk/orchestra/releases/tag/v0.2.1).
 
 ## Install
 

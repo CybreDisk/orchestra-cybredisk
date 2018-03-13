@@ -2,12 +2,26 @@
 IFS=$'\n'
 set -e
 
-VERSION='0.2.0'
+VERSION='0.2.1'
 
 REPOSITORIES=`cat repositories`
 
 if [ "x$PREFIX" == "x" ] ; then
 	PREFIX="`pwd`/prefix"
+	mkdir "$PREFIX" 2> /dev/null || true
+fi
+
+rm -r "$PREFIX" 2> /dev/null || true
+mkdir "$PREFIX" 2> /dev/null || true
+
+if [ ! -d "$PREFIX" ] ; then
+	echo '$PREFIX must be an existing directory'
+	exit 1
+fi
+
+if [ ! -z "`ls "$PREFIX"`" ] ; then
+	echo '$PREFIX must be empty'
+	exit 2
 fi
 
 if [ "x$PREBUILD" == "x" ] ; then
@@ -17,9 +31,6 @@ fi
 if [ "x$POSTBUILD" == "x" ] ; then
 	POSTBUILD="`pwd`/post-build.sh"
 fi
-
-rm -r "$PREFIX" 2> /dev/null || true
-mkdir "$PREFIX"
 
 echo "# CybreDisk Orchestra make.sh"
 echo "version $VERSION"
