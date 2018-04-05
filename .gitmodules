@@ -1,3 +1,7 @@
 [submodule "Autorun"]
 path = Autorun
 url = https://github.com/CybreDisk/Autorun.git
+
+[submodule "web"]
+path = web
+url = https://github.com/CybreDisk/web.git
