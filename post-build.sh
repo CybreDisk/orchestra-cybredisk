@@ -7,6 +7,11 @@ if test "$2" != 'post-build' ; then
 fi
 
 pushd "$1"
+
 mv -v Autorun/* .
 rmdir -v Autorun
+
+mv -v web/_site/* web
+rmdir -v web/_site
+
 popd
